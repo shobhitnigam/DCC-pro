@@ -26,20 +26,20 @@ SECRET_KEY = 'django-insecure-h8gsz!kq=)yl(a+kmk=gk$m57e0ahx#10^)mj$s=#n@%adhh+s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dccpro.herokuapp.com']
+ALLOWED_HOSTS = ['dccpro.herokuapp.com','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    'blogcontent.apps.BlogcontentConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'blogcontent'
 
 ]
 
