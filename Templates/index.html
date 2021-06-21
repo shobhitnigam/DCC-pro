@@ -1,12 +1,55 @@
-<!DOCTYPE html>
-
 {% load static %}
-
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Writers Corner</title>
+
+    <style>
+        .jumbotron {
+            background-color: #f4511e;
+            color: #fff;
+            padding: 100px 25px;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+
+        .values {
+            padding: 50px;
+        }
+
+        .contact-detail {
+            padding: 50px;
+        }
+
+        h2.text-center {
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+        }
+    </style>
+
+    <title>Writers-corner</title>
     <link rel="shortcut icon" href="Images/fav.png">
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
@@ -26,13 +69,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b><i>BillionaireDream</i></b></a>
+            <a class="navbar-brand" href="#"><b><i>Writers-corner</i></b></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about-section">About</a></li>
-                <li><a href="#service">Services</a></li>
+                <li><a href="#tutorial">Tutorials</a></li>
                 <li><a href="#contactus">Contact US</a></li>
             </ul>
         </div>
@@ -49,6 +92,7 @@
             </ol>
 
             <!-- Wrapper for slides -->
+
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src="{% static 'Images/dcc1.jpg' %}" width="100%" height="100%" />
@@ -63,6 +107,7 @@
                     <img src="{% static 'Images/dcc4.jpg' %}" width="100%" height="100%" />
                 </div>
             </div>
+
 
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -82,16 +127,18 @@
             <div class="col-sm-8 values">
                 <h2>ABOUT </h2>
                 <br>
-                <h4>BillionaireDream is one of the fastest growing company in Industry</h4>
-                <h4>fantasy sports platform which provides platform for playing fantasy cricket, football & kabaddi. Our
-                    vision is to make fantasy sports a part of every sports fan's life.</h4>
+                <h4>Writers-corner is one of the fastest growing company in Industry</h4>
+                <h4>Blog content platform which provides platform to write blogs and also learn content writing. Our
+                    vision is to make
+                    this website reach around the globe.</h4>
+
 
                 <form action="register" method="POST">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-default btn-lg">
-                        Register here</button>
+                    <button type="submit" class="btn btn-primary">Register here</button>
+                    <br><br>
                 </form>
-                
+
 
 
             </div>
@@ -109,53 +156,72 @@
             </div>
             <div class="col-sm-8 values">
                 <h2>Our Values</h2>
-                <h4><strong>MISSION:</strong> Our mission is to provide and deliver products and services to the various
-                    fields across the globe in order to ful-fill the clients and customers</h4>
-                <h4><strong>VISION:</strong> Our vision is to manufacture and create own brand for the sake of customers
+                <h4><strong>MISSION:</strong> Our mission is to provide and deliver content to the various
+                    fields across the globe in order to reach many clients and users</h4>
+                <h4><strong>VISION:</strong>Our vision is to manufacture and create own brand for the sake of customers
                     and folks ful-fillment also to achieve standard in industry with good quality products.</h4>
             </div>
         </div>
     </div>
 
-    <!-- Container (Services Section) -->
-    <div class="container-fluid text-center" id="service" style="background-color: black; color:white">
-        <h2>SERVICES</h2>
-        <h4>What we offer</h4>
+    <!-- Container (Tutorial Section) -->
+    <div class="container-fluid text-center" id="tutorial" style="background-color: black; color:white">
+        <h2>Tutorials Point</h2>
+        <h4>Check out the link below</h4>
         <br>
         <div class="row">
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-off logo-small"></span>
-                <h4>POWER</h4>
-                <p>Supporting Electrical <br> Electronic products</p>
+
+                <button class="btn btn-default btn-lg">
+                    <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">How to start writing blog</a></button>
+
+                <br><br>
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-heart logo-small"></span>
-                <h4>FAVOURITES</h4>
-                <p>Delivering clients required Products</p>
+
+
+
+                <button class="btn btn-default btn-lg">
+                    <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">How to make your blogs look
+                        ttractive</a></button>
+
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-lock logo-small"></span>
-                <h4>SECURITY</h4>
-                <p>Secured Services of SASS and PASS</p>
+
+
+                <button class="btn btn-default btn-lg">
+                    <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">How to market your blogs better</a></button>
+
+
             </div>
         </div>
         <br><br>
         <div class="row">
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-leaf logo-small"></span>
-                <h4>GREEN</h4>
-                <p>Supporting Go-Green<br>Eco friendly Products</p>
+
+                <button class="btn btn-default btn-lg">
+                    <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">Learn story telling</a></button>
+
+
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon glyphicon-certificate logo-small"></span>
                 <h4>CERTIFIED</h4>
-                <p>ISI certified and Govt Peremitted </p>
+
+                <button class="btn btn-default btn-lg">
+                    <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">Learn Screen-Writing</a></button>
+
+
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-wrench logo-small"></span>
-                <h4>SERVICES</h4>
-                <p>Repair of Products and Services <br>In case of Fault and Damage</p>
+
+
             </div>
+
+            <button class="btn btn-default btn-lg">
+                <a href="https://www.youtube.com/watch?v=Q8rN3JKqUc8">Master marketing your thoughts</a></button>
+
+
         </div>
     </div>
 
@@ -186,6 +252,10 @@
                     <div class="row">
                         <div class="col-sm-12 form-group">
                             <button class="btn btn-default pull-right" type="submit">Send</button>
+                            <button class="btn btn-default btn-lg">
+                                <a href="https://mail.google.com/mail/u/0/#inbox">submit</a></button>
+
+
                         </div>
                     </div>
                 </div>
@@ -193,4 +263,14 @@
         </div>
     </div>
 
+    <div>
+        {% for message in messages %}
+        <h3>
+            <center>{{message}}</center>
+        </h3>
+        {% endfor %}
+    </div>
+
 </body>
+
+</html>
